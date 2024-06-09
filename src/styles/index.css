@@ -1,12 +1,75 @@
+body {
+  background: url("https://static.pexels.com/photos/6663/desk-white-black-header.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+}
+* {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+}
+.timer {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+}
+.counterNumber {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+.timer {
+  background-color: #333333 !important;
+}
+p {
+  text-align: center;
+}
 
-/* 
+.middle {
+  display: flex;
+  justify-content: center;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.btn {
+  background-color: #333333;
+  color: #cccccc;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
 
-*/
+.bg-secondary {
+  background-color: #333333 !important;
+  color: #ffffff;
+  font-size: 2em;
+  margin: 0 5px;
+  width: 40px;
+  text-align: center;
+}
+
+.clockIcon {
+  animation: rotation 15s infinite linear;
+  color: #ffffff;
+  font-size: 2em;
+  margin: 0 5px;
+  width: 40px;
+  text-align: center;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+    to {
+    }
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
