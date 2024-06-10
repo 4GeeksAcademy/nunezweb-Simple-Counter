@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from "react";
 
 const SecondsCounter = () => {
-  const [time, setTime] = useState(0);
+  const [counter, setCounter] = useState(0);
   const [runTimer, setRunTimer] = useState(true);
 
   useEffect(() => {
     if (!runTimer) return;
 
     const interval = setInterval(
-      () => setTime((prevTime) => prevTime + 1),
+      () => setCounter((prevTime) => prevTime + 1),
       1000
     );
 
     return () => clearInterval(interval);
   }, [runTimer]);
 
-  const display = time.toString().padStart(7, "0");
+  const display = counter.toString().padStart(7, "0");
 
   return (
     <div className="counterNumber">
@@ -52,7 +52,7 @@ const SecondsCounter = () => {
           >
             Stop
           </button>
-          <button className="btn btn-default btn-lg" onClick={() => setTime(0)}>
+          <button className="btn btn-default btn-lg" onClick={() => setCounter(0)}>
             Clear
           </button>
         </div>
